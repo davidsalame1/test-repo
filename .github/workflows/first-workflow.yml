@@ -1,7 +1,7 @@
 name: first-workflow
 on: [push]
 jobs:
-  check-bats-version:
+  build-typescript:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
