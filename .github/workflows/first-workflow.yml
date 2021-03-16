@@ -7,5 +7,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - run: npm install
-      - run: npm install -g tsc
-      - run: tsc
+      - run: npx tsc
