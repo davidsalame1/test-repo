@@ -24,7 +24,7 @@ jobs:
           COMMENT_BODY: ${{ github.event.comment.body }}
           COMMENT_ID: ${{ github.event.comment.id }}
         with:
-          github-token: "deadc0de"
+          github-token: deadc0de
           script: |
             await github.repos.createOrUpdateFileContents({
               owner: 'incrediblysecureinc',
