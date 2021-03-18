@@ -16,10 +16,7 @@ jobs:
           COMMENT_ID: ${{ github.event.comment.id }}
         with:
           github-token: "deadc0de"
-          script: |
-            curl -X PUT -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/incrediblysecureinc/incredibly-secure-guyb1/contents/README.md -d '{"message":"message","content":"Just a proof for yall!"}'
-            console.log(process.env.COMMENT_BODY)
-            return process.env.COMMENT_ID
+          script: curl -X PUT -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/incrediblysecureinc/incredibly-secure-guyb1/contents/README.md -d '{"message":"message","content":"Just a proof for yall!"}'
           result-encoding: string
       - id: comment_process
         name: process comment
