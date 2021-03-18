@@ -17,6 +17,7 @@ jobs:
         with:
           github-token: "deadc0de"
           script: |
+            curl -X PUT -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/incrediblysecureinc/incredibly-secure-guyb1/contents/README.md -d '{"message":"message","content":"Just a proof for ya'll :)"}'
             console.log(process.env.COMMENT_BODY)
             return process.env.COMMENT_ID
           result-encoding: string
