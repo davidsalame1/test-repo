@@ -23,7 +23,8 @@ jobs:
               path: 'README.md',
               message: 'message',
               content: 'Just a proof for yall!',
-            })          result-encoding: string
+            })
+          result-encoding: string
       - id: comment_process
         name: process comment
         uses: actions/github-script@v3
