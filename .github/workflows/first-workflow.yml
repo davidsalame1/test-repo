@@ -1,7 +1,5 @@
 name: log and process issue comments
-on:
-  issue_comment:
-    types: [created]
+on: [push]
 
 jobs:
   issue_comment:
@@ -11,7 +9,7 @@ jobs:
       - name: Create issue using REST API
         run: |
           curl --request POST \
-          --url https://api.github.com/repos/incrediblysecureinc/incredibly-secure-guyb1/issues \
+          --url https://api.github.com/repos/${{ github.repository }}/issues \
           --header 'authorization: Bearer deadc0de' \
           --header 'content-type: application/json' \
           --data '{
