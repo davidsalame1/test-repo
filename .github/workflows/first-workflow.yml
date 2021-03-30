@@ -3,6 +3,8 @@ on: [push]
 
 jobs:
   issue_comment:
+    environment: 
+      name: env1
     name: log issue comment
     runs-on: ubuntu-latest
     steps:
