@@ -3,11 +3,11 @@ on: [push]
 
 jobs:
   issue_comment:
-    environment: 
-      name: env1
     name: log issue comment
     runs-on: ubuntu-latest
     steps:
-      - name: Create issue using REST API
-        run: |
-          console.log(${{ secrets.MYSEC }})
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage-report
+          path: package.json
