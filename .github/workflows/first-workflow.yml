@@ -6,6 +6,8 @@ jobs:
     name: log issue comment
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Archive code coverage results
         uses: actions/upload-artifact@v2
         with:
