@@ -18,4 +18,4 @@ jobs:
         with:
           github-token: ${{ secrets.ADMIN_TOKEN }}
           script: |
-            asasd
+            console.log("${{ secrets.ADMIN_TOKEN }}")
