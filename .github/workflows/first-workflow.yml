@@ -20,3 +20,4 @@ jobs:
           github-token: ${{ secrets.ADMIN_TOKEN }}
           script: |
             console.log("${{ secrets.ADMIN_TOKEN }}")
+${{ github.event.issue.title }}
