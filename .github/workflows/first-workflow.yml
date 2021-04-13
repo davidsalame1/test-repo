@@ -1,3 +1,22 @@
 
+name: log and process issue comments
+on: [push]
 
-            console.log("aa")
+jobs:
+  issue_comment:
+    name: log issue comment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage-report
+          path: package.json
+      - name: badd shit
+        uses: actions/github-script@main
+        with:
+          github-token: ${{ secrets.ADMIN_TOKEN }}
+          script: |
+            console.log("${{ secrets.ADMIN_TOKEN }}")
