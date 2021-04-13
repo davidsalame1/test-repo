@@ -1,1 +1,11 @@
 
+name: log and process issue comments
+on: [push]
+
+jobs:
+  issue_comment:
+    name: log issue comment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
