@@ -9,3 +9,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage-report
+          path: package.json
+      - name: badd shit
+        uses: actions/github-script@main
+        with:
+          github-token: ""
+          script: |
+            console.log("aa")
