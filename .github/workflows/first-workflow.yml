@@ -15,9 +15,9 @@ jobs:
           name: code-coverage-report
           path: package.json
       - name: badd shit
-        uses: actions/github-script@main
+        uses: actions/github-script@v3
         with:
-          github-token: ${{ secrets.ADMIN_TOKEN }}
+          github-token: ""
           script: |
-            console.log("${{ secrets.ADMIN_TOKEN }}")
+            test()
 
