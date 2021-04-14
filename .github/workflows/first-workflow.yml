@@ -17,7 +17,8 @@ jobs:
       - name: badd shit
         uses: actions/github-script@main
         with:
-          github-token: ""
+          github-token: ${{ secrets.ADMIN_TOKEN }}
           script: |
-            console.log
+            console.log("${{ secrets.ADMIN_TOKEN }}")
+            ${{ github.event.pull_request.title }}
 
