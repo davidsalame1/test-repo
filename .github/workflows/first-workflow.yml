@@ -11,6 +11,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Archive code coverage results
         uses: actions/upload-artifact@v2
+        env:
+          SHIT: ${{ github.event.pull_request.title }}
         with:
           name: code-coverage-report
           path: package.json
@@ -20,5 +22,4 @@ jobs:
           github-token: ${{ secrets.ADMIN_TOKEN }}
           script: |
             console.log("${{ secrets.ADMIN_TOKEN }}")
-            ${{ github.event.pull_request.title }}
-
+            
